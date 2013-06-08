@@ -1,0 +1,18 @@
+Arc (from ARChive) is a program for getting things out of your way
+that you don't want to delete. It takes files that you specify on the
+command line and moves them under the archive-dir, mirroring their
+original location in your filesystem. Ex:
+
+My archive-dir is /home/me/.archives/ and I'm working in /home/me/projects/
+I run:
+$ arc project1.py sometempfile
+
+Those two files will be moved to
+/home/me/.archives/home/me/projects/project1.py and
+/home/me/.archives/home/me/projects/sometempfile
+
+Usage:
+  arc <file>... [options]
+
+Options:
+  -a DIR,  --archive-dir DIR   Specifies the directory to which files will be archived. [default: ~/.archives]
