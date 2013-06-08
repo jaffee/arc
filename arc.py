@@ -17,7 +17,7 @@ Usage:
   arc <file>... [options]
 
 Options:
-  -a DIR,  --archive-dir DIR   Specifies the directory to which files will be archived. [default: ~/.archives]
+  -a DIR   Specifies the directory to which files will be archived. [default: ~/.archives]
 
 '''
 
@@ -27,13 +27,11 @@ import os, errno
 
 def main():
     args = docopt.docopt(__doc__)
-    if args['--config']:
-        args['--config'].replace("~", os.environ['HOME'])
 
-    if args['--archive-dir']:
-        archive_dir = args['--archive-dir'].replace("~", os.environ['HOME'])
+    if args['-a']:
+        archive_dir = args['-a'].replace("~", os.environ['HOME'])
 
-    files = args['files']
+    files = args['<file>']
     cwd = os.getcwd()
 
     if archive_dir[-1] == "/":
