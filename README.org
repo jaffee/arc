@@ -2,8 +2,9 @@
 Arc (from ARChive) is a program for getting things out of your way
 that you don't want to delete. It takes files that you specify on the
 command line and moves them under the archive-dir, mirroring their
-original location in your filesystem. Ex:
+original location in your filesystem.
 
+** Example
 My archive-dir is =/home/me/.archives/= and I'm working in =/home/me/projects/=
 I run:
 #+BEGIN_SRC bash
@@ -17,13 +18,13 @@ Those two files will be moved to:
 /home/me/.archives/home/me/projects/sometempfile
 #+END_SRC
 
-#+BEGIN_SRC
+** Usage
 Usage:
-  arc <file>... [options]
+=arc <file>... [options]=
 
 Options:
-  \-a DIR,  --archive-dir DIR   Specifies the directory to which files will be archived. [default: ~/.archives]
-#+END_SRC
+=-a DIR  Specifies the directory to which files will be archived. [default: ~/.archives]=
+
 
 * Copyright and License Information
 
