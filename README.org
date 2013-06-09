@@ -18,11 +18,13 @@ Those two files will be moved to:
 #+END_SRC
 
 #+BEGIN_SRC
+```
 Usage:
   arc <file>... [options]
 
 Options:
   -a DIR,  --archive-dir DIR   Specifies the directory to which files will be archived. [default: ~/.archives]
+```
 #+END_SRC
 
 * Copyright and License Information
