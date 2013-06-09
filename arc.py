@@ -34,6 +34,10 @@ def main():
     files = args['<file>']
     cwd = os.getcwd()
 
+    if cwd.startswith(archive_dir):
+        print "Don't recursively archive things!"
+        exit(1)
+
     if archive_dir[-1] == "/":
         archive_dir = archive_dir[:-1]
     for f in files:
